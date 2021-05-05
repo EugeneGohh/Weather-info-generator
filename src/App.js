@@ -4,6 +4,7 @@ import {
   REACT_APP_API_URL,
   REACT_APP_ICON_URL,
 } from "./utils/WeatherAPI";
+import Weather from "./components/Weather/Weather";
 import "./App.css";
 
 function App() {
@@ -31,7 +32,15 @@ function App() {
     fetchData();
   }, [lat, long]);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      {typeof data.main != "undefined" ? (
+        <Weather weatherData={data} />
+      ) : (
+        <div></div>
+      )}
+    </div>
+  );
 }
 
 export default App;
