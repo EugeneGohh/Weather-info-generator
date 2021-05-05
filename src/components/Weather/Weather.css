@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main {
   position: relative;
   top: 15vh;
@@ -56,7 +62,8 @@
 
 @media only screen and (max-width: 450px) {
   .main {
-    right: 2vh;
+    left: 0;
+    right: 0;
     width: 87%;
   }
 }
