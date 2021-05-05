@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   REACT_APP_API_KEY,
   REACT_APP_API_URL,
-  REACT_APP_ICON_URL,
 } from "./utils/WeatherAPI";
 import Weather from "./components/Weather/Weather";
 import "./App.css";
@@ -26,7 +25,8 @@ function App() {
         .then((result) => {
           setData(result);
           console.log(result);
-        });
+        })
+        .catch((err) => console.log("Nothing Found", err));
     };
 
     fetchData();

@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
 import moment from "moment";
 import "./Weather.css";
 
@@ -18,8 +17,14 @@ function Weather({ weatherData }) {
       </div>
 
       <div className="flex">
-        <p className="sunrise-sunset">Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-MY')}</p>
-        <p className="sunrise-sunset">Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-MY')}</p>
+        <p className="sunrise-sunset">
+          Sunrise:{" "}
+          {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString("en-MY")}
+        </p>
+        <p className="sunrise-sunset">
+          Sunset:{" "}
+          {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString("en-MY")}
+        </p>
       </div>
     </div>
   );
