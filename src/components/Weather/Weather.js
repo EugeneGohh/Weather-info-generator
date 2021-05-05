@@ -1,24 +1,27 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
 import moment from "moment";
+import "./Weather.css";
 
 function Weather({ weatherData }) {
   return (
-    <Card>
-      <Card.Content>
-        <Card.Header className="header">City name: {weatherData.name}</Card.Header>
+    <div className="main">
+      <p className="header">{weatherData.name}</p>
+      <div className="flex">
+        <p className="day">Day: {moment().format("dddd")}</p>
+        <p className="day">{moment().format("LL")}</p>
+      </div>
 
-        <p>Temprature: {weatherData.main.temp} &deg;C</p>
-        <p>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-MY')}</p>
-        <p>Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-MY')}</p>
-        <p>Description: {weatherData.weather[0].description}</p>
-        <p>Air humidity: {weatherData.main.humidity} %</p>
+      <div className="flex">
+        <p className="temp">Temprature: {weatherData.main.temp} &deg;C</p>
+        <p className="temp">Humidity: {weatherData.main.humidity} %</p>
+      </div>
 
-        <p>Day: {moment().format('dddd')}</p>
-        <p>Date: {moment().format('MMM Do YY')}</p>
-        <p>Current Time: {moment().format('LTS')}</p>
-      </Card.Content>
-    </Card>
+      <div className="flex">
+        <p className="sunrise-sunset">Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-MY')}</p>
+        <p className="sunrise-sunset">Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-MY')}</p>
+      </div>
+    </div>
   );
 }
 
