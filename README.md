@@ -1,3 +1,32 @@
+# Weather-info-generator
+![eugene-weather-generator netlify app_](https://user-images.githubusercontent.com/64187129/118391159-73760a80-b665-11eb-9571-fffbdd7e131e.png)
+
+## Contents
+* [Info](#Info)<br>
+* [Technologies Used](#Technologies)<br>
+* [Status](#Status)<br>
+
+## Info
+Make a weather generator depends on location using React.
+
+## Aim
+Built to learn fetching weather data depend on user's location.
+
+## Technologies
+1. JavaScript
+2. React
+3. npm
+5. HTML & CSS
+6. Git & GitHub
+
+## Status
+- [x] Plan project
+- [x] Fetch data from Open Weather API
+- [x] Build the UI
+- [x] Write some logic
+- [x] Final check
+- [x] Project is finished
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +97,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Weather-info-generator
